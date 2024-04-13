@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char operators;
+    float num1, num2;
+    printf("\t\tS I M P L E  C A L C U L A T O R\n\n");
+    cout << "\t\tEnter operator sign (+, -, *, /): ";
+    cin >> operators;
+    cout << "\tEnter two numbers which can be use for calculators: ";
+    cin >> num1 >> num2;
+    switch(operators) {
+        case '+':
+            cout << num1 << " + " << num2 << " = " << num1 + num2;
+            break;
+        case '-':
+            cout << num1 << " - " << num2 << " = " << num1 - num2;
+            break;
+        case '*':
+            cout << num1 << " * " << num2 << " = " << num1 * num2;
+            break;
+        case '/':
+            if(num2 != 0)
+                cout << num1 << " / " << num2 << " = " << num1 / num2;
+            else
+                cout << "Error! Division by zero!";
+            break;
+        default:
+            cout << "Invalid operator!";
+            break;
+    }
+    return 0;
+}
